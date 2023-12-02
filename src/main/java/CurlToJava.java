@@ -24,10 +24,7 @@ public class CurlToJava {
             HttpGet httpGet = new HttpGet(url);
 
             // Set the Authorization header
-            httpGet.addHeader("Authorization", "Bearer eyJqa3UiOiJodHRwczpcL1wvaWRlbnRpdHkuZGVsaXZlcm9vLmNvbVwvandrXC9lY18wMDEiLCJraWQiOiJlY18wMDEiLCJhbGciOiJFUzM4NCJ9.eyJzdWIiOiI1MWE5ZWRkZGJmNTI0OTFlZmFjMzU0NDIzYjUyMDVmZSIsInN1Yl9kcm4iOiJkcm46cm9vOnNlY3VyaXR5LXByaW5jaXBhbDpnYjo1MWE5ZWRkZGJmNTI0OTFlZmFjMzU0NDIzYjUyMDVmZSIsInNjb3BlIjpbImVtcGxveWVlIiwiZW1haWwiLCJvcGVuaWQiXSwiaXNzIjoiaHR0cHM6XC9cL2lkZW50aXR5LmRlbGl2ZXJvby5jb21cLyIsImV4cCI6MTY5NzExNjcyMSwiaWF0IjoxNjk3MTE0MDIxLCJqdGkiOiJhdF9mMGFhYzcyNDBiYWJlMmJmNjY5ODg5YjlmN2M1MzM2YyIsInNpZCI6ImI2Yjc1ZjFmZmViYzNiYTc1MjU4NTg2YzVjMmMxMDY2MTgxYTZmZjEifQ.-EpgG7svNEdeLvhSFUZeCxSCvMMNfscqgGONXC0DwV5i-2VAlHszW-3BmJnNt-Ri2DDBTdTMOff3zOk_u0mGl4w_dAKIRD5QvSA80V4McI562sysiGZ1VtdFn82ZctE-");
-
-            // Set the Cookie header
-            // httpGet.addHeader("Cookie", "__cf_bm=3ZagwiVMX0DZ_Zi0hSBQB6o6Bc9IcIfbFb9.ukLNlcQ-1697109779-0-ATD02IcBht6cYg3m/FkkLBWcSWdD7LfdcWI/jP3MmMhDsFEwlfGmTyQ37LYDBvbfJSs8O0llCjbke6fN2f2kW0NfBBSWuOgUQY9r905PX6ka");
+            httpGet.addHeader("Authorization", "Bearer ..");
 
             try {
                 // Execute the request
