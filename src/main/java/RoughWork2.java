@@ -1,5 +1,3 @@
-package cur;
-
 import com.opencsv.CSVReader;
 
 import java.io.FileReader;
@@ -7,13 +5,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
-
-public class RoughWork {
+public class RoughWork2 {
     public static void main(String[] args) throws IOException {
-        String rootPath = "/Users/nithinsingamsetti/Desktop/uuu/";
-
+        String rootPath = "/Users/nithinsingamsetti/Desktop/abr/";
         Map<String, Integer> listMap = new HashMap<>();
         List<String> fileNames = Files.list(Paths.get(rootPath))
                 .filter(file -> file.getFileName().toString().contains("csv"))
@@ -30,22 +25,10 @@ public class RoughWork {
             }
         });
 
-        AtomicInteger count = new AtomicInteger();
-        AtomicInteger repeatCount = new AtomicInteger();
-        listMap.keySet().forEach(
-                key -> {
-                    count.getAndIncrement();
-                    if (listMap.get(key) > 1) {
-//                        System.out.println(key);
-//                        System.exit(0);
-                        repeatCount.getAndIncrement();
-                    }
-                }
-        );
-        System.out.println("done");
-        System.out.println(repeatCount.get());
-        System.out.println(count.get());
+        System.out.println(nnn.toString());
     }
+
+    static Set<String> nnn = new HashSet<>();
 
     static void readCSVAndWriteToMap(Map<String, Integer> listMap, String path) throws IOException {
         FileReader filereader = new FileReader(path);
@@ -53,15 +36,17 @@ public class RoughWork {
         CSVReader csvReader = new CSVReader(filereader);
         String[] nextRecord = csvReader.readNext();
         String[] headers = nextRecord;
-        System.out.println(path);
+        System.out.println(Arrays.toString(headers));
+        Set<String> starts = new HashSet<>();
+        Set<String> ends = new HashSet<>();
+        //int i = 0;
         while ((nextRecord = csvReader.readNext()) != null) {
-            String key = nextRecord[0] + "_" + nextRecord[11] + "_" + nextRecord[12];
-//            String key = nextRecord[0];
-            listMap.putIfAbsent(key, 0);
-            //listMap.get(key).add(Arrays.toString(nextRecord));
-            listMap.put(key, listMap.get(key) + 1);
+            if (nextRecord[10].equals("RIFee")) {
+                //i++;
+                nnn.add(nextRecord[301]);
+                System.out.println(nextRecord[301]);
+                //System.out.println(Arrays.toString(nextRecord));
+            }
         }
     }
 }
-
-

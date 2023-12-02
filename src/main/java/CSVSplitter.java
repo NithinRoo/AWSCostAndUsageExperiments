@@ -1,6 +1,3 @@
-package cur;
-
-
 import java.io.*;
 
 public class CSVSplitter {

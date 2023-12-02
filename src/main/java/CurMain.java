@@ -1,5 +1,3 @@
-package cur;
-
 import com.opencsv.CSVReader;
 
 import java.io.FileReader;
@@ -10,8 +8,8 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.*;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
+public class CurMain {
+    public static void curMain(String[] args) throws IOException {
         FileReader filereader = new FileReader("/Users/nithinsingamsetti/IdeaProjects/ThreadSpace/src/main/filename.csv");
 
         CSVReader csvReader = new CSVReader(filereader);

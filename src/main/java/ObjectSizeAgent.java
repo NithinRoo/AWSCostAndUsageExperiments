@@ -1,5 +1,3 @@
-package cur;
-
 import java.lang.instrument.Instrumentation;
 
 public class ObjectSizeAgent {

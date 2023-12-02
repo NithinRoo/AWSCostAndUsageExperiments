@@ -1,5 +1,3 @@
-package cur_test;
-
 import com.opencsv.CSVReader;
 
 import java.io.FileReader;

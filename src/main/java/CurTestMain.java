@@ -1,5 +1,3 @@
-package cur_test;
-
 import com.opencsv.CSVReader;
 
 import java.io.*;
@@ -9,8 +7,8 @@ import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
+public class CurTestMain {
+    public static void curTestMain(String[] args) throws IOException {
         System.out.println("hii");
         //Unzip zip files
 //        UnzipCSVFile("/Users/nithinsingamsetti/IdeaProjects/ThreadSpace/src/main/cur_test/overwrite/cur-overwrite-test-00007.csv.zip"
